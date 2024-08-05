@@ -1,12 +1,11 @@
 
-// import {useQuery} from '@tanstack/react-query';
-import SwapApi from './components/SwapApi';
+import AppRouter from './router/AppRouter';
 function App() {
 
 
   return (
     <div className="App">
-    <SwapApi/>
+    <AppRouter/>
     </div>
   );
 }

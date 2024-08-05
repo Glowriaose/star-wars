@@ -1,6 +1,6 @@
 
 import { useFilmData } from "./api/api";
- const SwapApi =()=>{
+ const DashBoard =()=>{
     const { data } = useFilmData();
 
     console.log(data);
@@ -12,8 +12,8 @@ import { useFilmData } from "./api/api";
   </div> 
 <div  className="grid md:grid-cols-2 lg:grid-cols-3 gap-10  py-5 my-5 w-full text-white "> 
       {data?.results?.map((films) => (
-        <div className="card p-5 relative rounded-lg" key={films.title}>
-  <div  className="absolute top-0 bottom-0 left-0 h-full w-full bg-gray-900/80"/> 
+        <div className="card p-5 relative rounded-lg   bg-white " key={films.title}>
+  <div  className="absolute top-0 bottom-0 left-0 h-full w-full bg-gray-900/80   hover:bg-blue-500  hover:rounded hover:shadow-lg transition duration-300 ease-in-out" /> 
   <div className="relative">
   <h1 className="font-bold text-2xl"  key={films.title}>{films.title}</h1>
           <h1 className="" key={films.release_date}>{films.release_date}</h1>
@@ -30,4 +30,4 @@ import { useFilmData } from "./api/api";
       
     )
 }
-export default SwapApi;
+export default DashBoard;
